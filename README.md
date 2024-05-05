@@ -15,3 +15,7 @@ First dataset use only '.kt' and '.kts' files from github. Both test dataset use
 There used Levenshtein distance that will be calculated between model result, that was received, and what it should be. After calculation of distance, this value will be divided by sum of length of both results, and added into list. In the end there will be chosen median value.
 
 ## How to use 
+
+For using it you can load it and run on your device, but you should have 24 GB on GPU. Second variant is run it on colab with L4 GPU at least. After that you can run all cells in order, but third one will ask to upload user access token wtih write rule from HugginFace.
+
+
