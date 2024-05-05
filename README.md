@@ -8,18 +8,18 @@ There was used 3 datasets that was made from below data:
 2. [Python test dataset](https://huggingface.co/datasets/microsoft/codexglue_method_generation/viewer/default/test)
 3. [Kotlin test dataset](https://huggingface.co/datasets/codkiller0911/kotlin_code)
 
-First dataset use only '.kt' and '.kts' files from github. Both test dataset use only prompt and result information. This information will be save as 'input' and 'output'.
+The first dataset includes only '.kt' and '.kts' files from GitHub. Both last test datasets consist solely of prompt and result information, which will be saved as 'input' and 'output' respectively.
 
 ## How error calculation work
 
-There used Levenshtein distance that will be calculated between model result, that was received, and what it should be. After calculation of distance, this value will be divided by sum of length of both results, and added into list. In the end there will be chosen median value.
+The Levenshtein distance is utilized to measure the dissimilarity between the model's output and the expected output. This distance is calculated, then divided by the sum of the lengths of both results, and added to a list. Finally, the median value is selected from this list.
 
 ## How to use 
 
-For using it you can load it and run on your device, but you should have 24 GB on GPU. Second variant is run it on colab with L4 GPU at least. After that you can run all cells in order, but third one will ask to upload user access token wtih write rule from HugginFace.
+To use this tool, you can either load and run it on your local device, requiring a minimum of 24 GB of GPU memory, or run it on Google Colab with at least an L4 GPU. Afterward, you can execute all cells in order, but the third one will prompt you to upload a user access token with write permissions from Hugging Face.
 
 ## Results
 
-As we can see in the graph below, there are no significant changes in the quality of the code. Python code become closer on 0.1 to ideal answer, while Kotlin code was going away from it. It can be caused by: small epochs count, bad quality off dataset, and lack of an optimizer.
+As depicted in the graph below, there are no significant changes in the quality of the code. Python code approaches an ideal answer by 0.1, while Kotlin code diverges from it. This discrepancy could be attributed to several factors: a small number of epochs, poor dataset quality, the absence of an optimizer, and bad quality check off code. In the future, all the problems mentioned above can be fixed.
 
 ![Error value from epoch caunt](https://drive.google.com/uc?export=view&id=1OXms8HwE2t7yWNdGkV-mJguGd0wYTAh1)
