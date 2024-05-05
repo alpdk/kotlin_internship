@@ -18,4 +18,8 @@ There used Levenshtein distance that will be calculated between model result, th
 
 For using it you can load it and run on your device, but you should have 24 GB on GPU. Second variant is run it on colab with L4 GPU at least. After that you can run all cells in order, but third one will ask to upload user access token wtih write rule from HugginFace.
 
+## Results
 
+As we can see in the graph below, there are no significant changes in the quality of the code. Python code become closer on 0.1 to ideal answer, while Kotlin code was going away from it. It can be caused by: small epochs count, bad quality off dataset, and lack of an optimizer.
+
+![Error value from epoch caunt](https://drive.google.com/uc?export=view&id=1OXms8HwE2t7yWNdGkV-mJguGd0wYTAh1)
